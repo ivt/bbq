@@ -73,6 +73,15 @@ in your application.
 Supported Queue Types
 ---------------------
 
+### Amazon AWS SQS Queue
+
+$sqsClient = new SqsClient::factory( array(
+    'key'    => KEY,
+    'secret' => SECRET,
+    'region' => REGION,
+)
+    $queue = new AmazonSQSQueue('queue_id', $sqsClient);
+
 ### DirectoryQueue
 
     $queue = new DirectoryQueue('queue_id', '/tmp/queue');
